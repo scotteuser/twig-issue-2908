@@ -1,0 +1,12 @@
+Hello {{ name }}
+
+{% set some_var = {
+    'test'   : 'Testing',
+    'test2' : 'Test 2',
+} %}
+
+{#
+Within Drupal 8 causes 'instance of Twig\Node\Expression\AbstractExpression,
+instance of Twig\Node\CheckToStringNode given'
+#}
+{{ kint(some_var) }}
